@@ -1,0 +1,51 @@
+/* *** GENERAL *** */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.05rem;
+    font-family: $main-font;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h1,
+h2,
+p {
+    margin: 1rem 0;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1.2rem .7rem;
+
+    img {
+        display: block;
+        width: 70px;
+        margin: 1.2rem auto 2rem;
+    }
+
+    div {
+        ul {
+            padding: 0 1.2rem 0 1.5rem;
+            li {
+                padding: .3rem 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+/* *** FOOTER *** */
+.contact {
+    display: flex;
+    justify-content: center;
+    background: $main-white;
+    color: $main-black;
+    font-size: 2.5rem;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $main-black;
+        padding: 2rem 1rem;
+
+        i {
+            font-size: 3rem;
+            padding: 0.5rem 0.5rem 0.8rem;
+            color: $main-green;
+        }
+    }
+}

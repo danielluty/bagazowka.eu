@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
 /* *** VARIABLES *** */
 /* COLORS */
-$color: (
-    main: #4a9328,
-    light: #f4f4f9,
-    dark: #455848
-);
+$main-green: #4a9328;
+$main-white: #f4f4f9;
+$main-black: #455848;
 
 /* FONTS */
-$header-font: 'Montserrat', serif;
-$main-font: 'Lato', serif;
+$main-font: 'Montserrat',
+serif;
 
 /* BORDERS */
-$large-padding: 1.2rem .2rem; 
+$large-padding: 1.2rem .2rem;

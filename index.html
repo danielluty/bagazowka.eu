@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bagażówka, usługi transportowe, przeprowadzki, transport, Trójmiasto, Gdańsk</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav></nav>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <img src="./img/education.svg" alt=" About Icon" class="icon about__textbox__icon">
+        <h1>Kim jesteśmy</h1>
+        <p>Przeprowadzki są bardzo niewygodne. Dlatego my dostosujemy się do Twoich potrzeb i zagwarantujemy Ci
+            odpoczynek przy tym przedsięwzięciu.
+            Nasza oferta pozwoli zapomnieć o związanych z nim problemach. Odpręż się i obserwuj ze spokojną głową jak
+            wnosimy Twoją sofe na dane piętro :).</p>
+        <div>
+            <div>
+                <h2>Dlaczego my:</h2>
+                <ul>
+                    <li>profesjonalne samochody przystosowane do przewozu mebli</li>
+                    <li>pracownicy z wieloletnim doświadczeniem w branży</li>
+                    <li>fachowe doradztwo podczas przygotowań oraz w czasie przeprowadzki</li>
+                    <li>pakujemy i zabezpieczamy powierzone nam mienie na czas przeprowadzki</li>
+                    <li>jesteśmy elastyczni cenowo - z nami na pewno się dogadasz</li>
+                    <li>dostarczymy materiały do pakowania, folie, koce, kartony</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Co oferujemy:</h2>
+                <ul>
+                    <li>jeżeli masz zbyt mało czasu to my zaplanujemy całą operacje przeprowadzki</li>
+                    <li>zdemontujemy i zmontujemy meble podczas trwania przeprowadzki</li>
+                    <li>zabezpieczymy Twoje mienie na czas transportu</li>
+                    <li>załadunek, transport i rozładunek</li>
+                    <li>przewieziemy przedmioty nietypowe tj. fortepiany/pianina, sejfy oraz te o dużych gabarytach</li>
+                    <li>przeprowadzki mieszkań, domów, biur, magazynów, banków, sklepów, firm, oraz inne nietypowe</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="offer" id="offer">
+        <img src="./img/delivery.svg" alt="Offer Icon" class="icon offer__textbox__icon">
+        <h1>Usługi</h1>
+        <div>
+            <p>Dzięki naszemu wieloletniemu doświadczeniu, oferujemy usługi na najwyższym poziomie. Cały czas
+                doskonalimy się i usprawniamy system zarządzania transportem:</p>
+            <ul>
+                <li>na czas - bez opóźnień, o każdej porze</li>
+                <li>na miejsce - nie boimy się odległości</li>
+                <li>ze wszystkim - duże gabaryty nie stanowią dla nas problemu</li>
+                <li>w cenie - elastyczny cennik gwarantuje, że Twój portfel nas polubi</li>
+            </ul>
+        </div>
+        <div>
+            <p>Oferujemy transport do 2 ton ładunku w Gdańsku, Sopocie, Gdyni oraz na terenie całego kraju a także
+                Europy. Nasze platformy załadowcze HDS umożliwiają załadunek ciężkich towarów:</p>
+            <ul>
+                <li>pianina</li>
+                <li>sprzęt AGD i RTV</li>
+                <li>materiały budowlane</li>
+                <li>sprzęty biurowe</li>
+                <li>8 euro-palet jednorazowo</li>
+                <li>inne nietypowe rzeczy</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="prices" id="prices">
+        <img src="./img/label.svg" alt="Prices Icon" class="icon prices__textbox__icon">
+        <h1>Cennik</h1>
+        <div>
+            <h2>Transport</h2>
+            <p>Cena usługi transportowej jest zależna tylko od ilości przejechanych kilometrów.</p>
+            <p>Odległość między punktami <strong>(w kilometrach)</strong>:</p>
+            <form id="form-trans" class="cennik-trans">
+                <input type="number" id="km">
+                <button type="submit">Oblicz</button>
+                <div id="cenaTrans" class="cena-trans"></div>
+            </form>
+        </div>
+        <div>
+            <h2>Przeprowadzki</h2>
+            <p>W koszt ceny przeprowadzki wlicza się czas załadunku, rozładunku oraz czas
+                przejazdu między punktami( do 30km). Stawka godzinowa zależy od ilości ludzi
+                potrzebych do załadunku i rozładunku.</p>
+            <p>Czas trwania przeprowadzki <strong>(w godzinach)</strong>:</p>
+            <form id="form-przep" class="cennik-przep">
+                <input type="number" id="hours" required>
+                <label for="workers">Ilość pracowników:</label>
+                <select name="pracownicy" id="workers" required>
+                    <option value="70">Tylko kierowca</option>
+                    <option value="100">Kierowca + 1</option>
+                    <option value="130">Kierowca + 2</option>
+                    <option value="160">Kierowca + 3</option>
+                    <option value="190">Kierowca + 4</option>
+                </select>
+                <button type="submit">Oblicz</button>
+                <div id="cenaPrzep" class="cena-przep"></div>
+            </form>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <footer class="contact" id="contact">
+        <a href="tel:+48 785 587 587">Tel: +48 785 587 587<i class="fas fa-phone-square"></i>
+        </a>
+    </footer>
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
