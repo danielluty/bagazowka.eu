@@ -30,9 +30,7 @@ formTrans.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let cena = 0,
-        km = document
-        .querySelector('#km')
-        .value,
+        km = document.querySelector('#km').value,
         cenaTrans = document.querySelector('#cenaTrans'),
         poleCena = document.querySelector('.cena-trans');
 
@@ -49,18 +47,14 @@ formTrans.addEventListener('submit', (e) => {
 
 /* *** Cennik Przeprowadzek *** */
 
-const formPrzep = document.getElementById('form-przep');
+const formPrzep = document.querySelector('#form-przep');
 
 formPrzep.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let cena = 0,
-        hours = document
-        .getElementById('hours')
-        .value,
-        workers = document
-        .querySelector('#workers')
-        .value,
+        hours = document.querySelector('#hours').value,
+        workers = document.querySelector('#workers').value,
         poleCena = document.querySelector('.cena-przep');
 
     cena = hours * workers;

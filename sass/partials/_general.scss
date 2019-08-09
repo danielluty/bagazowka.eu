@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 h1,
@@ -98,7 +98,7 @@ section {
                 font-weight: bolder;
                 width: 200px;
                 text-align: center;
-                margin-top: 1rem;
+                margin: 1rem auto 0;
                 padding: .5rem 1rem;
             }
         }
@@ -182,7 +182,7 @@ section {
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     section {
@@ -243,7 +243,6 @@ section {
     }
 
     section {
-
         div {
             display: flex;
             align-items: center;
@@ -256,13 +255,15 @@ section {
             }
         }
 
-        &.offer, &.prices {
+        &.offer,
+        &.prices {
             div {
                 div {
                     width: 44%;
                 }
             }
         }
+
         &.prices {
             h1 {
                 margin-top: 1rem;
@@ -293,7 +294,7 @@ section {
     }
 
     h2 {
-        font-size: 1.7rem;
+        font-size: 1.55rem;
     }
 
     section {
