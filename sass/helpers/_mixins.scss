@@ -1,19 +1,7 @@
 /* *** MIXINS *** */
 
-@mixin desktop {
-    @media only screen and (min-width: 1281px) {
-        @content;
-    }
-}
-
-@mixin desktop-s {
-    @media only screen and (min-width: 993px) {
-        @content;
-    }
-}
-
-@mixin desktop-xs {
-    @media only screen and (min-width: 769px) {
+@mixin phone {
+    @media only screen and (min-width: 481px) {
         @content;
     }
 }
@@ -24,8 +12,27 @@
     }
 }
 
-@mixin phone {
-    @media only screen and (min-width: 481px) {
+@mixin desktop-xs {
+    @media only screen and (min-width: 769px) {
         @content;
     }
 }
+
+@mixin desktop-s {
+    @media only screen and (min-width: 993px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1281px) {
+        @content;
+    }
+}
+
+
+
+
+
+
+

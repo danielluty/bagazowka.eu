@@ -10,6 +10,12 @@
 body {
     font-size: 1.05rem;
     font-family: $main-font;
+    background: fixed url('../../img/map.svg') center / cover no-repeat, $main-green;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 a {
@@ -17,7 +23,8 @@ a {
 }
 
 h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    text-decoration: underline;
 }
 
 h2 {
@@ -30,9 +37,14 @@ p {
     margin: 1rem 0;
 }
 
+p {
+    line-height: 1.2;
+    padding: .5rem 0;
+}
+
 section {
-    min-height: 100vh;
-    padding: 1.2rem .7rem;
+    padding: 1.2rem .7rem 2rem;
+    min-height: 550px;
 
     img {
         display: block;
@@ -40,12 +52,251 @@ section {
         margin: 1.2rem auto 2rem;
     }
 
+    &.offer {
+        img {
+            width: 90px;
+            margin: 1rem auto;
+        }
+    }
+
     div {
         ul {
             padding: 0 1.2rem 0 1.5rem;
+            list-style-type: square;
+
             li {
                 padding: .3rem 0;
             }
         }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input,
+            button,
+            select {
+                width: 60%;
+                height: 50px;
+                margin: .6rem auto;
+                padding: .4rem;
+                font-family: $main-font;
+            }
+
+            label {
+                font-size: 1.3rem;
+                text-align: center;
+                margin: .7rem auto .5rem;
+                font-weight: bolder;
+            }
+
+            .cena {
+                display: none;
+                background: $main-white;
+                color: #000;
+                font-size: 1.85rem;
+                font-weight: bolder;
+                width: 200px;
+                text-align: center;
+                margin-top: 1rem;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}
+
+@include phone {
+    body {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        margin: 1.3rem 0 .3rem;
+    }
+
+    section {
+        padding: 1.9rem;
+
+        img {
+            width: 100px;
+        }
+
+        &.offer {
+            img {
+                width: 125px;
+                margin: .5rem auto;
+            }
+        }
+    }
+}
+
+@include tablet {
+    body {
+        font-size: 1.15rem;
+    }
+
+    p {
+        line-height: 1.3;
+    }
+
+    section {
+        padding-bottom: 2.5rem;
+
+        &.about,
+        &.offer {
+
+            h2,
+            ul {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+
+            h2 {
+                margin: 1.2rem auto .5rem;
+            }
+        }
+
+        &.prices {
+            div {
+                form {
+
+                    input,
+                    button,
+                    select {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop-xs {
+    body {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 5.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        position: relative;
+        border: 3px solid $main-white;
+        margin: 2rem;
+        padding: 1.5rem 2rem 2.5rem;
+
+        img {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            right: 2rem;
+            top: .5rem;
+        }
+
+        &.about {
+            img {
+                width: 80px;
+            }
+        }
+
+        &.offer {
+            border: 3px solid $main-green;
+
+            img {
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &.prices {
+            h1 {
+                margin-top: 3rem;
+            }
+
+            div {
+                form {
+
+                    input,
+                    button,
+                    select {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop-s {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+
+        div {
+            display: flex;
+            align-items: center;
+
+            div {
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+            }
+        }
+
+        &.offer, &.prices {
+            div {
+                div {
+                    width: 44%;
+                }
+            }
+        }
+        &.prices {
+            h1 {
+                margin-top: 1rem;
+            }
+
+            div {
+                form {
+
+                    input,
+                    button,
+                    select {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    body {
+        font-size: 1.35rem;
+    }
+
+    h1 {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    section {
+        padding: 4rem;
     }
 }

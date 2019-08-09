@@ -1,10 +1,13 @@
 /* *** FOOTER *** */
 .contact {
+    width: 100%;
     display: flex;
     justify-content: center;
     background: $main-white;
     color: $main-black;
     font-size: 2.5rem;
+    text-align: center;
+    box-shadow: -1px -1px 2px 0px rgba(245,241,241,1);
 
     a {
         display: flex;
@@ -15,7 +18,7 @@
 
         i {
             font-size: 3rem;
-            padding: 0.5rem 0.5rem 0.8rem;
+            padding: 0.7rem 0.5rem 0.8rem 1rem;
             color: $main-green;
         }
     }

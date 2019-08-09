@@ -10,13 +10,13 @@ $(function () {
     $('.navigation__link').click(function () {
         if ($(window).innerWidth() < 600) {
             $('#js-nav').slideUp(200);
-        } 
+        }
     });
 
     $('.navigation__logo').click(function () {
         if ($(window).innerWidth() < 600) {
             $('#js-nav').slideUp(200);
-        } 
+        }
     });
 });
 
@@ -24,17 +24,17 @@ $(function () {
 
 /* *** Cennik Transportow *** */
 
-const formTrans = document.getElementById('form-trans');
+const formTrans = document.querySelector('#form-trans');
 
 formTrans.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let cena = 0;
-    let km = document
-        .getElementById('km')
-        .value;
-    let cenaTrans = document.getElementById('cenaTrans');
-    let poleCena = document.querySelector('.cena-trans');
+    let cena = 0,
+        km = document
+        .querySelector('#km')
+        .value,
+        cenaTrans = document.querySelector('#cenaTrans'),
+        poleCena = document.querySelector('.cena-trans');
 
     if (km > 0 && km < 10000) {
         km = km - 3;
@@ -54,18 +54,17 @@ const formPrzep = document.getElementById('form-przep');
 formPrzep.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let cena = 0;
-    let hours = document
+    let cena = 0,
+        hours = document
         .getElementById('hours')
-        .value;
-    let workers = document
+        .value,
+        workers = document
         .querySelector('#workers')
-        .value;
-    let cenaPrzep = document.getElementById('cenaPrzep');
-    let poleCena = document.querySelector('.cena-przep');
+        .value,
+        poleCena = document.querySelector('.cena-przep');
 
     cena = hours * workers;
 
     poleCena.style = 'display: block;';
-    cenaPrzep.innerHTML = `${cena} zł`;
+    poleCena.innerHTML = `${cena} zł`;
 });
