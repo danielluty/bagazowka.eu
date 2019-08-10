@@ -15,16 +15,33 @@
 </head>
 
 <body>
+    <nav class="navigation">
+        <div class="nav-wrapper">
+            <a href="#"><span class="logo">bagazowka.eu</span></a>
+            <ul class="nav">
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#offer">Oferta</a></li>
+                <li><a href="#prices">Cennik</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <label for="nav-toggle" class="nav-toggle">
+                <span></span>
+            </label>
+        </div>
+    </nav>
     <div class="wrapper">
-        <header>
-            <nav></nav>
+        <header class="header">
+            <h1></h1>
         </header>
+        <a name="about"></a>
+        <hr>
 
         <!-- ABOUT -->
-        <section class="about" id="about">
+        <section class="about">
             <img src="./img/education.svg" alt=" About Icon">
             <h1>Kim jesteśmy:</h1>
-            <p>Jak wiadomo <strong>przeprowadzki</strong> nie należą do wygodnych zajęć. Dlatego dostosujemy się do Twoich potrzeb i zagwarantujemy Ci
+            <p>Jak wiadomo <strong>przeprowadzki</strong> nie należą do wygodnych zajęć.<br> Dlatego dostosujemy się do
+                Twoich potrzeb i zagwarantujemy Ci
                 odpoczynek przy tym przedsięwzięciu.</p>
             <div>
                 <div>
@@ -47,15 +64,18 @@
                         <li>załadunek, transport i rozładunek</li>
                         <li>przewieziemy przedmioty nietypowe tj. fortepiany, sejfy oraz te o dużych gabarytach
                         </li>
-                        <li>przeprowadzki mieszkań, domów, biur, magazynów, banków, sklepów, firm, oraz innych nietypowych
+                        <li>przeprowadzki mieszkań, domów, biur, magazynów, banków, sklepów, firm, oraz innych
+                            nietypowych
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <a name="offer"></a>
+        <hr>
         <!-- OFFER -->
-        <section class="offer" id="offer">
+        <section class="offer">
             <img src="./img/delivery.svg" alt="Offer Icon">
             <h1>Nasze usługi:</h1>
             <div>
@@ -85,8 +105,10 @@
             </div>
         </section>
 
+        <a name="prices"></a>
+        <hr>
         <!-- PRICES -->
-        <section class="prices" id="prices">
+        <section class="prices">
             <img src="./img/label.svg" alt="Prices Icon">
             <h1>Kalkulator cen:</h1>
             <div>
@@ -120,17 +142,16 @@
                         <div id="cenaTrans" class="cena-trans cena"></div>
                     </form>
                 </div>
+
             </div>
+
         </section>
     </div>
     <!-- CONTACT -->
     <footer class="contact" id="contact">
-        <a href="tel:+48 785 587 587">+48 785 587 587 <i class="fas fa-phone-square"></i>
+        <a href="tel:+48785587587">+48 785 587 587 <i class="fas fa-phone-square"></i>
         </a>
     </footer>
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </body>
 

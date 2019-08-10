@@ -1,29 +1,24 @@
 /* Navigation */
-$(function () {
-    $('#toggler')
-        .click(function () {
-            if ($(window).innerWidth() < 600) {
-                $('#js-nav').slideToggle(200);
-            }
+const nav = document.querySelector('.nav'),
+    toggler = document.querySelector('.nav-toggle'),
+    links = document.querySelectorAll('li a'),
+    linksArr = Array.from(links);
+
+if (window.innerWidth <= 768) {
+    toggler.addEventListener('click', () => {
+        nav.classList.toggle('nav__shown');
+        linksArr.forEach(link => {
+            link.style.opacity = 1;
         });
-
-    $('.navigation__link').click(function () {
-        if ($(window).innerWidth() < 600) {
-            $('#js-nav').slideUp(200);
-        }
     });
-
-    $('.navigation__logo').click(function () {
-        if ($(window).innerWidth() < 600) {
-            $('#js-nav').slideUp(200);
-        }
+    linksArr.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('nav__shown');
+        });
     });
-});
+}
 
-// Smooth scrolling
-
-/* *** Cennik Transportow *** */
-
+/* *** Price Calc Transport *** */
 const formTrans = document.querySelector('#form-trans');
 
 formTrans.addEventListener('submit', (e) => {
@@ -45,8 +40,7 @@ formTrans.addEventListener('submit', (e) => {
     }
 });
 
-/* *** Cennik Przeprowadzek *** */
-
+/* *** Price Calc Moving *** */
 const formPrzep = document.querySelector('#form-przep');
 
 formPrzep.addEventListener('submit', (e) => {

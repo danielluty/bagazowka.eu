@@ -1,9 +1,11 @@
 ### Prepros ###
 # Config Prepros files to ignore
+prepros.cfg
 prepros-6.config
 
 ### Sass ###
 /sass
+.sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
